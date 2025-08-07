@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+@theme {
+	/* neutral */
+	--neutral-100: #f2f2f7;
+	--neutral-200: #e4e4ef;
+	--neutral-600: #404254;
+	--neutral-700: #2a2b37;
+	--neutral-800: #21222c;
+	--neutral-900: #12131a;
+
+	/* purple */
+	--purple-400: #d3a0fa;
+	--purple-500: #c27cf8;
+
+	/* yellow */
+	--yellow-500: #ff9f00;
+
+	/* orange */
+	--orange-500: #fe8159;
+	--orange-800: #da3701;
+
+	font-family: 'DM Sans', system-ui, sans-serif;
+
+}
