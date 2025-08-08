@@ -1,6 +1,8 @@
 <script>
+	import { theme } from '$lib/stores/theme'
 	import Logo from '../assets/logo.svg'
 	import Sun from '../assets/sun.svg'
+	import Moon from '$lib/assets/moon.svg'
 </script>
 
 <header>
@@ -10,10 +12,15 @@
 			<h2 class="text-preset-2">Character Counter</h2>
 		</div>
 
-		<div
-			class="grid size-11 cursor-pointer place-content-center rounded-lg bg-neutral-700 transition-colors hover:bg-neutral-600"
+		<button
+			onclick={() => theme.toggle()}
+			class="grid size-11 cursor-pointer place-content-center rounded-lg bg-neutral-100 transition-all duration-500 dark:bg-neutral-700"
 		>
-			<img src={Sun} alt="Sun logo" />
-		</div>
+			{#if $theme === 'dark'}
+				<img src={Sun} alt="Sun logo" />
+			{:else}
+				<img src={Moon} alt="Sun logo" />
+			{/if}
+		</button>
 	</div>
 </header>

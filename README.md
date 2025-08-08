@@ -2,8 +2,6 @@
 
 This is a solution to the [Frontend Mentor](https://www.frontendmentor.io/) challenge that involves building a responsive and accessible character counter application. The goal is to match the provided design and implement the required functionality using modern frontend tools.
 
-F---
-
 ## 🚀 Features
 
 - ✅ Real-time character and word counting
@@ -37,5 +35,3 @@ pnpm install
 # Run the development server
 pnpm run dev
 ```
-
-

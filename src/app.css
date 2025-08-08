@@ -25,8 +25,18 @@
 	--text-6xl: 4rem;
 }
 
-body {
+html {
 	font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+body {
+	background-color: #ffffff;
+	color: var(--color-neutral-900);
+}
+
+.dark body {
+	background-color: var(--color-neutral-900);
+	color: var(--color-neutral-200);
 }
 
 progress {
@@ -45,6 +55,11 @@ progress::-webkit-progress-value {
 }
 
 progress::-webkit-progress-bar {
+	background-color: var(--color-neutral-100);
+	border-radius: 12px;
+}
+
+.dark progress::-webkit-progress-bar {
 	background-color: var(--color-neutral-800);
 	border-radius: 12px;
 }
@@ -92,12 +107,5 @@ progress::-webkit-progress-bar {
 
 	.label * {
 		cursor: pointer;
-	}
-}
-
-@media (prefers-color-scheme: dark) {
-	body {
-		background-color: var(--color-neutral-900);
-		color: var(--color-neutral-200);
 	}
 }

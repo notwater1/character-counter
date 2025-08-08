@@ -4,7 +4,9 @@
 </script>
 
 <main>
-	<h1 class="text-preset-1 mx-auto max-w-xl text-center text-balance">
+	<h1
+		class="text-preset-1 mx-auto max-w-xl text-center text-balance text-neutral-900 dark:text-neutral-100"
+	>
 		Analyze your text in real-time.
 	</h1>
 
@@ -13,18 +15,13 @@
 			name="text"
 			id="text"
 			placeholder="Start typing here… (or paste your text)"
-			class="mt-12 mb-3 min-h-52 w-full resize-none rounded-xl bg-neutral-800 p-5 outline-0 focus:outline-2 focus:outline-purple-500"
+			class="text-preset-3 mt-12 mb-3 min-h-52 w-full resize-none rounded-xl bg-neutral-100 p-5 text-neutral-700 outline-0 focus:outline-2 focus:outline-purple-500 dark:bg-neutral-800 dark:text-neutral-200"
 		></textarea>
 
 		<div class="flex items-center justify-between">
 			<div class="flex gap-6">
 				<label for="exclude-spaces" class="label">
-					<input
-						type="checkbox"
-						name="exclude-spaces"
-						id="exclude-spaces"
-						class="size-4 outline-0"
-					/>
+					<input type="checkbox" name="exclude-spaces" id="exclude-spaces" class="size-4" />
 					<span class="select-none">Exclude Spaces</span>
 				</label>
 
