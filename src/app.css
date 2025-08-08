@@ -1,25 +1,103 @@
 @import 'tailwindcss';
+@import '@fontsource/dm-sans/400.css';
+@import '@fontsource/dm-sans/600.css';
+@import '@fontsource/dm-sans/700.css';
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-	/* neutral */
-	--neutral-100: #f2f2f7;
-	--neutral-200: #e4e4ef;
-	--neutral-600: #404254;
-	--neutral-700: #2a2b37;
-	--neutral-800: #21222c;
-	--neutral-900: #12131a;
+	--color-neutral-100: #f2f2f7;
+	--color-neutral-200: #e4e4ef;
+	--color-neutral-600: #404254;
+	--color-neutral-700: #2a2b37;
+	--color-neutral-800: #21222c;
+	--color-neutral-900: #12131a;
 
-	/* purple */
-	--purple-400: #d3a0fa;
-	--purple-500: #c27cf8;
+	--color-purple-400: #d3a0fa;
+	--color-purple-500: #c27cf8;
 
-	/* yellow */
-	--yellow-500: #ff9f00;
+	--color-yellow-500: #ff9f00;
 
-	/* orange */
-	--orange-500: #fe8159;
-	--orange-800: #da3701;
+	--color-orange-500: #fe8159;
+	--color-orange-800: #da3701;
 
+	--text-4xl: 2.5rem;
+	--text-6xl: 4rem;
+}
+
+body {
 	font-family: 'DM Sans', system-ui, sans-serif;
+}
 
+progress {
+	height: 12px;
+	flex: auto;
+	overflow: hidden;
+}
+
+progress::-moz-progress-bar {
+	background-color: var(--color-purple-400);
+}
+
+progress::-webkit-progress-value {
+	border-radius: 12px;
+	background-color: var(--color-purple-400);
+}
+
+progress::-webkit-progress-bar {
+	background-color: var(--color-neutral-800);
+	border-radius: 12px;
+}
+
+@layer components {
+	.text-preset-1 {
+		font-size: var(--text-6xl);
+		font-weight: 700;
+		line-height: 100%;
+		letter-spacing: -1px;
+	}
+
+	.text-preset-1-mobile {
+		font-size: var(--text-4xl);
+		font-weight: 700;
+		line-height: 100%;
+		letter-spacing: -1px;
+	}
+
+	.text-preset-2 {
+		font-size: var(--text-2xl);
+		font-weight: 600;
+		line-height: 130%;
+		letter-spacing: -1px;
+	}
+
+	.text-preset-3 {
+		font-size: var(--text-xl);
+		font-weight: 400;
+		line-height: 140%;
+		letter-spacing: -0.6px;
+	}
+
+	.text-preset-4 {
+		font-weight: 400;
+		line-height: 130%;
+		letter-spacing: -0.6px;
+	}
+
+	.label {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.label * {
+		cursor: pointer;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: var(--color-neutral-900);
+		color: var(--color-neutral-200);
+	}
 }
