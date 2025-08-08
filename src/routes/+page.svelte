@@ -1,6 +1,10 @@
 <script>
 	import Card from '$lib/components/card.svelte'
 	import Progress from '$lib/components/progress.svelte'
+
+	let text = $state('')
+	let limit = $state(0)
+	let shouldExludeSpaces = $state(false)
 </script>
 
 <main>
@@ -16,6 +20,7 @@
 			id="text"
 			placeholder="Start typing here… (or paste your text)"
 			class="text-preset-3 mt-12 mb-3 min-h-52 w-full resize-none rounded-xl bg-neutral-100 p-5 text-neutral-700 outline-0 focus:outline-2 focus:outline-purple-500 dark:bg-neutral-800 dark:text-neutral-200"
+			bind:value={text}
 		></textarea>
 
 		<div class="flex items-center justify-between">
@@ -29,6 +34,10 @@
 					<input type="checkbox" name="limit" id="limit" class="size-4" />
 					<span class="select-none">Set Character Limit</span>
 				</label>
+
+				{#if limit > 0}
+					<input type="number" name="limit" id="limit" min={1} max={limit} />
+				{/if}
 			</div>
 
 			<p>Approx. reading time: 1 minute</p>
