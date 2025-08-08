@@ -1,38 +1,41 @@
-# sv
+# Character Counter
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+This is a solution to the [Frontend Mentor](https://www.frontendmentor.io/) challenge that involves building a responsive and accessible character counter application. The goal is to match the provided design and implement the required functionality using modern frontend tools.
 
-## Creating a project
+F---
 
-If you're seeing this, you've probably already done this step. Congrats!
+## 🚀 Features
 
-```sh
-# create a new project in the current directory
-npx sv create
+- ✅ Real-time character and word counting
+- ✅ Visual feedback for character limits
+- ✅ Responsive design for all screen sizes
+- ✅ Accessible and keyboard-friendly
 
-# create a new project in my-app
-npx sv create my-app
+---
+
+## 🛠️ Built With
+
+- [Svelte](https://svelte.dev/) – A reactive JavaScript framework
+- [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework
+
+---
+
+## 📦 Installation
+
+To get this project running locally:
+
+```bash
+# Clone the repo
+git clone https://github.com/notwater1/character-counter.git
+
+# Enter the directory
+cd character-counter
+
+# Install dependencies
+pnpm install
+
+# Run the development server
+pnpm run dev
 ```
 
-## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
